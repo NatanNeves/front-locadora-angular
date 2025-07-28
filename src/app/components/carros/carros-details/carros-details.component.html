@@ -1,1 +1,25 @@
-<p>carros-details works!</p>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4"></div>
+
+        <div class="col-lg-4 centralizar topo">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <h3>Cadastre o carro</h3> <br>
+                    <!-- user input -->
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="text" id="nome" class="form-control" [(ngModel)]="carro.nome" />
+                        <label mdbLabel class="form-label" for="nome">nome</label>
+                    </mdb-form-control>
+
+                    <!-- Submit button -->
+                    <button mdbRipple type="button" class="btn btn-primary btn-block" (click)="save()">Salvar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
