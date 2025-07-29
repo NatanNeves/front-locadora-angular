@@ -27,7 +27,7 @@
                                 <td class="direita">
                                     <button class="btn btn-primary" mdbRipple routerLink="/admin/carros/edit/{{(carro.id)}}" >
                                         Editar</button>
-                                    <button class="btn btn-danger" mdbRipple (click)="excluir()">
+                                    <button class="btn btn-danger" mdbRipple (click)="deleteById(carro)">
                                         Excluir</button>
                                 </td>
                             </tr>
