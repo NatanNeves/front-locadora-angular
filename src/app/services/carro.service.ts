@@ -15,6 +15,10 @@ export class CarroService {
   constructor() { }
 
   listAll(): Observable<Carro[]> {
-    return this.http.get<Carro[]>(this.API+"/listAll");
+    return this.http.get<Carro[]>(this.API);
+  }
+
+  delete(id: number): Observable<string> {
+    return this.http.delete<string>(this.API + '/' + id, {responseType: 'text' as 'json'});
   }
 }

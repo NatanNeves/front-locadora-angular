@@ -65,14 +65,20 @@ export class CarrosListComponent {
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
-        const indice = this.lista.findIndex(x => x.id === carro.id);
-        this.lista.splice(indice, 1);
 
-        Swal.fire({
+        this.carroService.delete(carro.id).subscribe({
+          next: (lista) => { //quando o back retorna a lista atualizada
+            Swal.fire({
           title: 'Excluído!',
           text: 'Carro deletado com sucesso.',
           icon: 'success',
           confirmButtonText: 'Ok'
+        });
+        this.listAll(); //atualiza a lista de carros
+          },
+          error: (err) => {
+            alert('Erro ao excluir carro: ' + err.message);
+          }
         });
       }
     });
