@@ -15,6 +15,7 @@ export const routes: Routes = [
         {path:'carros', component: CarrosListComponent},
         {path:'carros/new', component: CarrosDetailsComponent},
         {path:'carros/edit/:id', component: CarrosDetailsComponent},
+        {path:'carros/:id', component: CarrosDetailsComponent},
         {path:'marcas', component: MarcasListComponent},
         {path:'marcas/new', component: MarcasDetailsComponent},
         {path:'marcas/edit/:id', component: MarcasDetailsComponent}
