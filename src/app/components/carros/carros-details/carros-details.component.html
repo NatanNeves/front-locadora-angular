@@ -1,25 +1,74 @@
-<br>
 <div class="container">
-    <div class="row">
-        
+  <div class="row">
+    <div class="col-lg-12 centralizar topo">
+      <div class="card">
+        <div class="card-body">
+          <h3>Cadastre o carro</h3>
+          <br>
 
-        <div class="col-lg-12 centralizar topo">
+          <!-- Nome -->
+          <mdb-form-control class="mb-4">
+            <input
+              mdbInput
+              type="text"
+              id="nome"
+              class="form-control"
+              [(ngModel)]="carro.nome"
+              name="nome"
+            />
+            <label mdbLabel class="form-label" for="nome">Nome</label>
+          </mdb-form-control>
 
-            <div class="card">
-                <div class="card-body">
+          <!-- Marca -->
+          <mdb-form-control class="mb-4">
+            <input
+              mdbInput
+              type="text"
+              id="marca"
+              class="form-control"
+              [(ngModel)]="carro.marca"
+              name="marca"
+            />
+            <label mdbLabel class="form-label" for="marca">Marca</label>
+          </mdb-form-control>
 
-                    <h3>Cadastre o carro</h3> <br>
-                    <!-- user input -->
-                    <mdb-form-control class="mb-4">
-                        <input mdbInput type="text" id="nome" class="form-control" [(ngModel)]="carro.nome" />
-                        <label mdbLabel class="form-label" for="nome">nome</label>
-                    </mdb-form-control>
+          <!-- Modelo -->
+          <mdb-form-control class="mb-4">
+            <input
+              mdbInput
+              type="text"
+              id="modelo"
+              class="form-control"
+              [(ngModel)]="carro.modelo"
+              name="modelo"
+            />
+            <label mdbLabel class="form-label" for="modelo">Modelo</label>
+          </mdb-form-control>
 
-                    <!-- Submit button -->
-                    <button mdbRipple type="button" class="btn btn-primary btn-block" (click)="save()">Salvar</button>
-                </div>
-            </div>
+          <!-- Ano -->
+          <mdb-form-control class="mb-4">
+            <input
+              mdbInput
+              type="number"
+              id="ano"
+              class="form-control"
+              [(ngModel)]="carro.ano"
+              name="ano"
+            />
+            <label mdbLabel class="form-label" for="ano">Ano</label>
+          </mdb-form-control>
 
+          <!-- Botão -->
+          <button
+            mdbRipple
+            type="button"
+            class="btn btn-primary btn-block"
+            (click)="save()"
+          >
+            Salvar
+          </button>
         </div>
+      </div>
     </div>
+  </div>
 </div>
